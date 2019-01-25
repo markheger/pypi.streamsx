@@ -3,7 +3,7 @@ setup(
   name = 'streamsx',
   packages = ['streamsx', 'streamsx.spl', 'streamsx.topology', 'streamsx.scripts', 'streamsx._streams'],
   include_package_data=True,
-  version = '1.12.0dev1',
+  version = '1.12.0dev2',
   description = 'IBM Streams Python Support',
   long_description = open('DESC.txt').read(),
   author = 'IBM Streams @ github.com',
