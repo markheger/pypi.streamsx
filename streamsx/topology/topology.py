@@ -370,17 +370,13 @@ class Topology(object):
                         name = si[2].__name__
                     
             if namespace is None:
-                print('EMPTYNAMESPACE', si)
                 if si[2] is not None:
                     namespace = si[2].__module__
-                    print('EMPTYNAMESPACE-MODULE', namespace)
                 elif si[0] is not None:
                     namespace = os.path.splitext(os.path.basename(si[0]))[0]
-                    print('EMPTYNAMESPACE-FILE', namespace)
                     if namespace.startswith('<ipython-input'):
                         if 'DSX_PROJECT_NAME' in os.environ:
                             namespace = os.environ['DSX_PROJECT_NAME']
-                            print('EMPTYNAMESPACE-DSX', namespace)
         
         if sys.version_info.major == 3:
           self.opnamespace = "com.ibm.streamsx.topology.functional.python"
