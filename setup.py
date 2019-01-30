@@ -1,9 +1,10 @@
 from setuptools import setup
+import streamsx._streams._version
 setup(
   name = 'streamsx',
   packages = ['streamsx', 'streamsx.spl', 'streamsx.topology', 'streamsx.scripts', 'streamsx._streams'],
   include_package_data=True,
-  version = '1.12.0dev6',
+  version = streamsx._streams._version.__version__,
   description = 'IBM Streams Python Support',
   long_description = open('DESC.txt').read(),
   author = 'IBM Streams @ github.com',
